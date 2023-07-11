@@ -11,8 +11,8 @@ const Card = () => {
             <div className='sumar_carrito'>
                 <div className='sumar_carrito_cantidad'>
                     <button>-</button>
-                <p>1</p>
-                <button>+</button>
+                    <p>1</p>
+                    <button>+</button>
                 </div>
                 <div className='sumar_carrito_boton'>
                     <button>Agregar al carrito</button>
