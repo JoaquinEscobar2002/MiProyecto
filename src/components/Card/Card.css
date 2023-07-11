@@ -20,6 +20,11 @@
 .img_producto{
     width: 300px;
     height: 235px;
+    border-bottom: solid 1px;
+}
+
+.nombre_producto{
+    font-size: 1.5rem;
 }
 
 .sumar_carrito{
