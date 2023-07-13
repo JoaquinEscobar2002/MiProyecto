@@ -1,23 +1,15 @@
 import React from 'react';
 import './Card.css'
+import ItemCount from '../ItemCount/ItemCount'
 
-const Card = () => {
+export const Card = () => {
 
     return (
         <article className='card_producto'>
             <img className='img_producto' src="https://abanicobazar.com/wp-content/uploads/2023/05/bdc0bae8-145f-4c3d-914c-ab26d5460345-PhotoRoom.png-PhotoRoom.png" alt="taza de cafe" />
             <p className='nombre_producto'>Taza de cafe</p>
             <p className='precio_producto'>$400</p>
-            <div className='sumar_carrito'>
-                <div className='sumar_carrito_cantidad'>
-                    <button>-</button>
-                    <p>1</p>
-                    <button>+</button>
-                </div>
-                <div className='sumar_carrito_boton'>
-                    <button>Agregar al carrito</button>
-                </div>
-            </div>
+            <ItemCount />
         </article>
         
         )
