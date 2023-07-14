@@ -1,26 +1,28 @@
 import { useState } from "react";
+// Componente de las cards para sumar los productos al carrito por cantidad.
+const ItemCount = ({stock, onAdd }) => {
 
-const ItemCount = () => {
-
-    const [count, setCount] = useState(0);
-    const stock = 11;
-
+    //Declaro el useState con la variable count (cantidad de tal producto)
+    const [count, setCount] = useState(1);
+    
+    //Funcion que resta a setCount 
     const handleSub = () =>{
-        if(!count < 1){
+        if(count > 1){
             setCount(count - 1)
         } else{
             alert("No se puede restar mas")
         }
         
     }
-
+    //Funcion que resta a setCount 
     const handleSum = () =>{
-        if(count < stock){
+        if(stock > count){
             setCount(count + 1)
         } else{
             alert("No hay mas stock disponible")}
     }
-
+    
+    //Renderiza los botones y la cantidad en la card
     return (
     <div className='sumar_carrito'>
         <div className='sumar_carrito_cantidad'>
@@ -29,7 +31,7 @@ const ItemCount = () => {
             <button onClick={() => handleSum()}>+</button>
         </div>
         <div className='sumar_carrito_boton'>
-            <button onClick={()=>onAdd()}>Agregar al carrito</button>
+            <button disabled={!stock} onClick={()=>onAdd(count)}>Agregar al carrito</button>
         </div>
     </div>
     )
