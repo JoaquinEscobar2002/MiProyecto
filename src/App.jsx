@@ -1,28 +1,17 @@
-import React from 'react'
+import { useState } from 'react'
 import './App.css'
-import Header from './components/Header/Header' 
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import Card from './components/Card/Card'
+import NavBar from './assets/components/NavBar/NavBar'
+import Home from './assets/Vistas/Home/Home'
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Header />
-      <ItemListContainer greeting={"Web en desarrollo..."} />
-      <section className='contenedor_card'>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        {/* <div>
-          <h3>Bazar</h3>
-          <Card />
-        </div> */}
-      </section>
+      <NavBar />
+      <Home />
     </>
-    
   )
 }
 
-export default App 
+export default App

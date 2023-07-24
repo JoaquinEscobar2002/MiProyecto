@@ -35,7 +35,7 @@
 .sumar_carrito_cantidad{
     display: inline;
     justify-content: space-between;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .sumar_carrito_cantidad p{
