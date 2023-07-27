@@ -2,12 +2,14 @@ import './Detail.css'
 import { useState, useEffect } from 'react'
 import { getProductById } from '../../../../public/request/productos.js'
 import ItemDetailContainer from '../../components/ItemDetailContainer/ItemDetailContainer'
+import { useParams } from 'react-router-dom'
 
 const Detail = () => {
-    const [producto, setProducto] = useState(null)
-
+    const {id} = useParams();
+    const [producto, setProducto] = useState(null);
+    
     useEffect(() => {
-        getProductById('1')
+        getProductById(id)
             .then(response => {
                 setProducto(response)
             })

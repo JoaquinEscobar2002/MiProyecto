@@ -4,6 +4,7 @@ import Home from './assets/Vistas/Home/Home'
 import Detail from './assets/Vistas/Detail/Detail'
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
 import { CartProvider } from './assets/state/Cart.context';
+import { Category } from './assets/Vistas/Category/Category';
 
 
 const routes = createBrowserRouter(
@@ -11,7 +12,7 @@ const routes = createBrowserRouter(
     <Route element={<NavBar />}>
     <Route path="/" element={<Home/>}/>
     <Route path="/item/:id" element={<Detail/>}/>
-    <Route path="/category/:id" element={<div>Categoria</div>}/>
+    <Route path="/category/:id" element={<Category/>}/>
     </Route>
   )
 )

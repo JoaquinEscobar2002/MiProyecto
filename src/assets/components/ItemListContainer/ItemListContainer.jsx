@@ -8,6 +8,7 @@ const ItemListContainer = () => {
   
     const [productos, setProductos] = useState([])
 
+    console.log(productos)
     useEffect(() => {
         getProducts()
             .then(response => {

@@ -40,16 +40,18 @@ const products = [
         "name": "Estufa",
         "price": "1500",
         "stock": 14,
-        "description": "Es una taza de cafe",
+        "description": "Es una estufa muy calida",
         "category": "hogar",
         "img": "https://i0.wp.com/casauniversal.com.ar/wp3/wp-content/uploads/2022/03/ESTUFA-A-CUARZO-TILCARA-VERTICAL-STD.png"
     }
 ]
 
-export const getProducts = () => {
+export const getProducts = (id) => {
+    const _products = id ? products.filter((products) => products.category === id) : products
+
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(products)
+            resolve(_products)
         }, 500)
     })
 }
