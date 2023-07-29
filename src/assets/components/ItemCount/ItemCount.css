@@ -1,0 +1,19 @@
+.sumar_carrito{
+    display: block;
+
+}
+
+.sumar_carrito_cantidad{
+    display: inline;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.sumar_carrito_cantidad p{
+    display: inline-block;
+    margin: 1rem;
+}
+
+.sumar_carrito_boton{
+    display: inline;
+}

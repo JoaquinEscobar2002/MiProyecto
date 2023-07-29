@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./ItemCount.css"
+
 // Componente de las cards para sumar los productos al carrito por cantidad.
 const ItemCount = ({stock, onAdd }) => {
 

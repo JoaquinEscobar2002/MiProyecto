@@ -22,8 +22,9 @@ const ItemListContainer = () => {
 
     return (
 
-        <section>
-            <ul className='ItemListContainer'>
+        <section className='productos'>
+            <div class="productos__titulo"><h2>Nuestros mejores precios</h2></div>
+            <ul className='productos__contenedor'>
                 {productos.map((productos) => (
                 <Card key={productos.id} productos={productos} />
                 

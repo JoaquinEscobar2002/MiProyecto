@@ -25,8 +25,8 @@ export const Category = () =>{
     }, [id])
 
     return(
-        <section>
-        <ul className='ItemListContainer'>
+        <section className='productos'>
+        <ul className='productos__contenedor'>
             {productos.map((productos) => (
             <Card key={productos.id} productos={productos} />
             

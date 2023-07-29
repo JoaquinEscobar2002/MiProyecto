@@ -11,11 +11,13 @@ export const Card = ({productos}) => {
     const navigate = useNavigate();
 
     return (
-        <article className='card_producto'>
+        <article className="productos__tarjeta">
             <img className='img_producto' src={productos.img} alt={productos.name} onClick={() => navigate(`/item/${productos.id}`)}/>
-            <p className='nombre_producto'>{productos.name}</p>
-            <p className='precio_producto'>${productos.price}</p>
-            <ItemCount stock={productos.stock} onAdd={handleCard} />
+            <div className="productos__info">
+                <p className="titulo__prod">{productos.name}</p>
+                <p className="precio">${productos.price}</p>
+                <ItemCount stock={productos.stock} onAdd={handleCard} />
+            </div>
         </article>
         
         )
