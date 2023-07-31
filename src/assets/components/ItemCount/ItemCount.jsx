@@ -28,13 +28,15 @@ const ItemCount = ({stock, onAdd }) => {
     return (
     <div className='sumar_carrito'>
         <div className='sumar_carrito_cantidad'>
-            <button onClick={() => handleSub()}>-</button>
             <p>{count}</p>
-            <button onClick={() => handleSum()}>+</button>
+            <div className="div_botons">
+                <div className='sumar_carrito_botons' onClick={() => handleSum()}>+</div>
+                <div className='sumar_carrito_botons' onClick={() => handleSub()}>-</div>
+            </div>
+            
         </div>
-        <div className='sumar_carrito_boton'>
-            <button disabled={!stock} onClick={()=>onAdd(count)}>Agregar al carrito</button>
-        </div>
+        <button className='sumar_carrito_boton' disabled={!stock} onClick={()=>onAdd(count)}>Agregar</button>
+ 
     </div>
     )
 };

@@ -13,7 +13,7 @@ const products = [
         "name": "Mouse",
         "price": "700",
         "stock": 10,
-        "description": "Es una mouse para pc",
+        "description": "Es un mouse para pc",
         "category": "pc",
         "img": "https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-anywhere-3s/product-gallery/graphite/mx-anywhere-3s-mouse-top-view-graphite.png?v=1"
     },
@@ -22,7 +22,7 @@ const products = [
         "name": "Tupper",
         "price": "650",
         "stock": 20,
-        "description": "Es una tupper de plastico",
+        "description": "Es un tupper de plastico",
         "category": "cocina",
         "img": "https://tiendup.b-cdn.net/business/48/products/WGQ6AD_60426f58b31d1_large.jpg"
     },

@@ -1,19 +1,51 @@
 .sumar_carrito{
-    display: block;
+    display: inline-flex;
+    margin: 1rem;
 
 }
 
 .sumar_carrito_cantidad{
-    display: inline;
-    justify-content: space-between;
-    margin: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    margin: 0 1rem;
 }
 
 .sumar_carrito_cantidad p{
     display: inline-block;
-    margin: 1rem;
+    padding: 0 1rem;
+}
+
+.div_botons{
+    display: inline-block;
+    width: auto;
+    height: 50px;
+}
+
+.sumar_carrito_botons{
+    display: flex;
+    height: 25px;
+    width: 50px;
+    margin-bottom: 1px;
+    align-items: center;
+    justify-content: center;
+    background-color: #646cff;
+}
+
+.sumar_carrito_botons:hover{
+    cursor: pointer;
+    background-color: #3d429c;
 }
 
 .sumar_carrito_boton{
-    display: inline;
+    padding: 1rem;
+    background-color: #646cff;
+}
+
+.sumar_carrito_boton:hover{
+    cursor: pointer;
+    background-color: #3d429c;
 }

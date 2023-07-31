@@ -1,0 +1,28 @@
+.cardDetail{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cardDetail-img{
+    max-width: 700px;
+}
+
+.cardDetail-div{
+    margin: 4rem 0;
+}
+.cardDetail-div p{
+    margin: 1rem 0;
+}
+
+
+
+.cardDetail-info{
+    font-size: 1.5rem;
+    padding: 3rem;
+}
+
+.cardDetail-info .cardDetail-name{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
