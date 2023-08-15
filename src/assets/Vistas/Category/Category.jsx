@@ -10,10 +10,6 @@ export const Category = () =>{
     const {id} = useParams();
     const [productos, setProductos] = useState([]);
 
-    console.log(productos)
-
-    
-
     useEffect(() => {
         getProducts(id)
             .then(response => {

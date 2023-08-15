@@ -8,22 +8,22 @@ const ItemListContainer = () => {
   
     const [productos, setProductos] = useState([])
 
-    console.log(productos)
     useEffect(() => {
         getProducts()
             .then(response => {
                 setProductos(response)
-                console.log(setProductos)
             })
             .catch(error => {
                 console.log(error)
             })
     }, [])
 
+    
+
     return (
 
         <section className='productos'>
-            <div class="productos__titulo"><h2>Nuestros mejores precios</h2></div>
+            <div className="productos__titulo"><h2>Nuestros mejores precios</h2></div>
             <ul className='productos__contenedor'>
                 {productos.map((productos) => (
                 <Card key={productos.id} productos={productos} />

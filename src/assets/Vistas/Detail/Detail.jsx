@@ -3,10 +3,11 @@ import { useState, useEffect } from 'react'
 import { getProductById } from '../../../../public/request/productos.js'
 import ItemDetailContainer from '../../components/ItemDetailContainer/ItemDetailContainer'
 import { useParams } from 'react-router-dom'
+import { useCartContext } from '../../state/Cart.context'
 
 const Detail = () => {
     const {id} = useParams();
-    const [producto, setProducto] = useState(null);
+    const [producto, setProducto] = useState({});
     
     useEffect(() => {
         getProductById(id)
@@ -17,6 +18,8 @@ const Detail = () => {
                 console.log(error)
             })
     }, [])
+
+    
 
     return(
         <section className='DetailSection'>

@@ -4,7 +4,7 @@ const Home = () => {
   
     return (
 
-    <main>
+    <main className='conteinerMain'>
         < ItemListContainer />
     </main>
 

@@ -2,11 +2,13 @@ import React from 'react';
 import './Card.css'
 import ItemCount from '../ItemCount/ItemCount'
 import { useNavigate } from 'react-router-dom';
+import { useCartContext } from '../../state/Cart.context';
 
 export const Card = ({productos}) => {
 
-    const handleCard = (qty) =>{
-        console.log('La cantidad agregada es ', qty)
+    const {addProduct} = useCartContext();
+    const handleAdd = (qty) => {
+        addProduct(productos, qty)
     }
     const navigate = useNavigate();
 
@@ -16,7 +18,7 @@ export const Card = ({productos}) => {
             <div className="productos__info">
                 <p className="titulo__prod">{productos.name}</p>
                 <p className="precio">${productos.price}</p>
-                <ItemCount stock={productos.stock} onAdd={handleCard} />
+                <ItemCount stock={productos.stock} onAdd={handleAdd} />
             </div>
         </article>
         
