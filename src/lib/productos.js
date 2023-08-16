@@ -1,4 +1,4 @@
-const products = [
+/* const products = [
     {
         "id": 1,
         "name": "Taza de cafe",
@@ -44,24 +44,47 @@ const products = [
         "category": "hogar",
         "img": "https://i0.wp.com/casauniversal.com.ar/wp3/wp-content/uploads/2022/03/ESTUFA-A-CUARZO-TILCARA-VERTICAL-STD.png"
     }
-]
+] */
 
-export const getProducts = (id) => {
-    const _products = id ? products.filter((products) => products.category === id) : products
 
-    return new Promise((resolve) => {
+import { collection, getDocs, getDoc, doc, where, query } from "firebase/firestore"
+import { db } from "./config"
+
+const productosRef = collection(db, "productos");
+
+
+
+export const getProducts = async (category) => {
+    const q = category ? query(productosRef, where('category','==', category)) : productosRef
+
+/*     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(_products)
         }, 500)
-    })
+    }) */
+
+
+    let products = [];
+    const querySnapshot = await getDocs(q)
+
+
+    querySnapshot.forEach((doc) => {
+        products = [...products, { ...doc.data(), id: doc.id}];
+    });
+    return products;
+
+
 }
 
-export const getProductById = (Id) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(products.find(products => products.id === +Id))
-        }, 500)
-    })
+export const getProductById = async (Id) => {
+
+    const document = doc(db, "productos", Id);
+    const docSnap = await getDoc(document);
+
+    if(docSnap.exists()) return { id: docSnap.id, ...docSnap.data()};
+
+    return null;
+
+
 }
 
-console.log(getProductById)

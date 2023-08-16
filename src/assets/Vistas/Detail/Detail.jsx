@@ -1,6 +1,6 @@
 import './Detail.css'
 import { useState, useEffect } from 'react'
-import { getProductById } from '../../../../public/request/productos.js'
+import { getProductById } from '../../../lib/productos'
 import ItemDetailContainer from '../../components/ItemDetailContainer/ItemDetailContainer'
 import { useParams } from 'react-router-dom'
 import { useCartContext } from '../../state/Cart.context'

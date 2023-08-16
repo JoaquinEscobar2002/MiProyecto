@@ -1,6 +1,6 @@
 import Card from '../Card/Card'
 import styles from'./ItemListContainer.css'
-import { getProducts } from '../../../../public/request/productos.js'
+import { getProducts } from '../../../lib/productos'
 import { useEffect, useState } from 'react'
 
 
