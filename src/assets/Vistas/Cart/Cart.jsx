@@ -1,6 +1,7 @@
 import './Cart.css'
 import { useCartContext } from '../../state/Cart.context'
 import { useEffect } from 'react';
+import FormCompra from '../../components/FormCompra/FormCompra';
 
 const Cart = () => {
     const {cart, cleanCart, getTotalPrice, removeProduct} = useCartContext();
@@ -34,7 +35,13 @@ const Cart = () => {
                 <p className='precioProducto.'>Total: ${getTotalPrice()}</p>
                 <button className='boton-vaciar' onClick={() => cleanCart()}>Vaciar carrito</button>
 
+<br /><br /><br /><br /><br /><br /><br />
+
+                <FormCompra/>
             </div>
+
+
+            
 
         </section>
         </>

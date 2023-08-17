@@ -12,10 +12,9 @@ const NavBar = () => {
 
     <>
     <header>
-        <nav className="nav">
-            <a href="#" className="logo"><h1>Bazzar BDC</h1></a>
+    <nav className="nav">
+            <NavLink className={"logo"} to={"/"}><h1>Bazzar BDC</h1></NavLink>
             <ul className="menu">
-                <li><NavLink className={"link"} to={"/"}>Home</NavLink></li>
                 <li><NavLink className={"link"} to={"/category/cocina"}>Cocina</NavLink></li>
                 <li><NavLink className={"link"} to={"/category/hogar"}>Hogar</NavLink></li>
                 <li><NavLink className={"link"} to={"/category/pc"}>PC</NavLink></li>
