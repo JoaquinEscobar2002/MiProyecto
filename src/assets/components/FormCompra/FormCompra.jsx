@@ -79,7 +79,7 @@ const FormCompra = ({cambiarEstado}) => {
         }
 
         if (!tel.match(/^\+?\d+$/)) {            
-            alert('🤨 Invalid Phone number');
+            alert('🤨 Numero invalido');
             return false;
         }
 
